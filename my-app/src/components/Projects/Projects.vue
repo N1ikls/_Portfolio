@@ -1,8 +1,6 @@
 <template>
   <div class="main__projects projects">
-    <div class="projects__title main__title">
-      <h2>Projects</h2>
-    </div>
+    <Title :title="title"></Title>
     <div class="projects__row">
       <Card
         v-for="(card, index) in cards"
@@ -16,10 +14,12 @@
 </template>
 
 <script>
+import Title from "../../Global/Components/Title.vue";
 import Card from "./Card.vue";
 export default {
   data: () => {
     return {
+      title: "Projects",
       cards: [
         {
           title: "Patreon",
@@ -47,6 +47,7 @@ export default {
   },
   components: {
     Card,
+    Title,
   },
 };
 </script>
@@ -59,5 +60,16 @@ export default {
   column-gap: 3.5rem;
   row-gap: 3.5rem;
   padding: 3.5rem;
+}
+
+@media (max-width: 829px) {
+  .projects__row {
+    padding: 20px 0 0 0 !important;
+  }
+}
+@media (max-width: 500px) {
+  .projects__row {
+    grid-template-columns: none !important;
+  }
 }
 </style>

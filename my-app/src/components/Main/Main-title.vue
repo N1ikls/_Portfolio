@@ -4,25 +4,36 @@
       Welcome To <br />
       My Personal Portfolio
     </h2>
-    <p>
-      The purpose of JavaScript Mastery is to help aspiring and established
-      developers to take their development skills to the next level and build
-      awesome apps.
-    </p>
-    <v-btn class="btn">Learn More</v-btn>
-    <div class="line"></div>
+    <Text_body :text="text" />
+    <Button :text="btn" />
+    <Gradient_line />
   </div>
 </template>
 
 <script>
+import Text_body from "@/Global/Components/Text.vue";
+import Gradient_line from "../../Global/Components/Gradient_line.vue";
+import Button from "../../Global/Components/Button.vue";
 export default {
-  name: "Title",
+  data: () => {
+    return {
+      btn: "Learn More",
+      text: " The purpose of JavaScript Mastery is to help aspiring and established developers to take their development skills to the next level and build awesome apps.",
+    };
+  },
+  components: {
+    Gradient_line,
+    Button,
+    Text_body,
+  },
+  name: "Main_title",
 };
 </script>
 
-<style lang="scss" >
+<style lang="scss">
 .main__title {
   h2 {
+    font-family: "Space Grotesk", sans-serif;
     font-weight: 800;
     font-size: 62px;
     line-height: 72px;
@@ -36,41 +47,6 @@ export default {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 16px;
-  }
-  p {
-    max-width: 700px;
-    font-size: 24px;
-    line-height: 40px;
-    font-weight: 300;
-    padding-bottom: 1.5rem;
-    color: rgba(255, 255, 255, 0.5);
-  }
-  .btn {
-    width: 210px;
-    height: 64px !important;
-    border-radius: 50px;
-    font-size: 20px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    background: linear-gradient(270deg, #00dbd8 0%, #b133ff 100%);
-    cursor: pointer;
-    transition: 0.5s ease;
-    position: relative;
-    overflow: hidden;
-    opacity: 1;
-    text-transform: none !important;
-    margin-bottom: 90px;
-  }
-  .line {
-    width: 60px;
-    height: 7px;
-    border-radius: 50px;
-    background: linear-gradient(270deg, #00dbd8 0%, #b133ff 100%);
-    transition: 0.5s ease;
-    margin-bottom: 80px;
   }
 }
 </style>

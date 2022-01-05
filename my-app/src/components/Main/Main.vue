@@ -4,6 +4,7 @@
       <Title></Title>
       <Projects></Projects>
       <Technologies></Technologies>
+      <About></About>
     </div>
   </main>
 </template>
@@ -11,7 +12,8 @@
 <script>
 import Title from "./Main-title.vue";
 import Projects from "../Projects/Projects.vue";
-import Technologies from "@/Technologies/Technologies.vue"
+import Technologies from "@/Technologies/Technologies.vue";
+import About from "../About/About.vue";
 export default {
   data: () => {
     return {
@@ -23,6 +25,7 @@ export default {
     Title,
     Projects,
     Technologies,
+    About,
   },
 };
 </script>
@@ -36,5 +39,6 @@ export default {
 }
 main {
   margin-top: 70px;
+  flex: 1 1 auto;
 }
 </style>

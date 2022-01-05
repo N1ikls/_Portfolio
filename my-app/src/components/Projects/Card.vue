@@ -111,4 +111,11 @@ export default {
   text-transform: none !important;
   margin-bottom: 20px;
 }
+
+@media (max-width:442px) {
+  .projects__card {
+    max-width: 270px;
+  }
+  
+}
 </style>

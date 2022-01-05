@@ -15,13 +15,20 @@ export default {
 };
 </script>
 <style lang="scss">
+.bm-burger-button {
+  width:40px !important;
+  
+}
+.line-style {
+  height: 3px !important;
+}
 .backanimation {
   position: absolute;
-  top: 5%;
-  left: 40%;
+  top: 3%;
+  left: 47%;
   right: 0%;
-  width: 800px;
-  height:500px;
+  width: 600px;
+  height: 600px;
 }
 body {
   font-family: "Space Grotesk", sans-serif;

@@ -8,6 +8,7 @@
           </v-btn>
           Portfolio
         </div>
+
         <nav class="header__menu menu">
           <ul class="menu__list">
             <li v-for="(item, index) in list" :key="index" class="menu__item">
@@ -33,6 +34,7 @@
 </template>
 
 <script>
+//import { Slide } from "vue-burger-menu";
 export default {
   data: () => {
     return {
@@ -45,6 +47,9 @@ export default {
       ],
     };
   },
+  components: {
+   // Slide,
+  },
 };
 </script>
 
@@ -52,12 +57,14 @@ export default {
 .header__row {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 .header__container {
   display: flex;
   min-height: 70px;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .header__title {
@@ -84,6 +91,28 @@ export default {
 .icon {
   &:not(:last-child) {
     margin-right: 30px;
+  }
+}
+@media (max-width:829px) {
+  .header__title {
+    padding-left: 30%;
+  }
+  .menu__list {
+    padding: 1.7rem;
+    flex-wrap: wrap;
+  }
+  .menu__item {
+    font-size: 30px;
+    padding: 1rem;
+  }
+  .header__row {
+   
+  }
+  .header__conatiner {
+    justify-content: center !important;
+  }
+  .header__icons {
+    padding-left: 30%;
   }
 }
 </style>
